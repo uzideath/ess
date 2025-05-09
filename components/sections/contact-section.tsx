@@ -41,9 +41,8 @@ export default function ContactSection() {
   }
 
   const contactInfo = {
-    email: "contact@energysystemsservices.com",
-    phone: "+1 (555) 123-4567",
-    address: "123 Energy Plaza, New York, NY 10001",
+    email: "support@energyserevices.com",
+    phone: "+61 430 516 683",
     hours: "Monday-Friday: 8am-6pm EST",
   }
 
@@ -208,13 +207,6 @@ export default function ContactSection() {
                   transition={{ duration: 0.4, delay: 0.3 }}
                   className="flex items-start gap-4 group"
                 >
-                  <div className="bg-green-500/20 p-3 rounded-full">
-                    <MapPin className="h-6 w-6 text-green-200" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-green-200 mb-1">Visit Us</p>
-                    <p className="text-white">{contactInfo.address}</p>
-                  </div>
                 </motion.div>
 
                 <motion.div
@@ -234,25 +226,6 @@ export default function ContactSection() {
                 </motion.div>
               </div>
 
-              <div className="pt-6 border-t border-white/20">
-                <p className="text-white/80 mb-4 flex items-center">
-                  <Users className="h-4 w-4 mr-2" /> Connect with us on social media:
-                </p>
-                <div className="flex gap-3">
-                  {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors"
-                      aria-label={`Visit our ${social.label} page`}
-                    >
-                      <social.icon className="h-5 w-5 text-white" />
-                    </a>
-                  ))}
-                </div>
-              </div>
             </div>
           </motion.div>
 

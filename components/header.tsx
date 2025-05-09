@@ -43,7 +43,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        {/* <nav className="hidden md:flex gap-6">
+        <nav className="hidden md:flex gap-6">
           <Link href="#about" className="text-sm font-medium text-white/90 hover:text-green-400 transition-colors">
             About
           </Link>
@@ -62,7 +62,7 @@ export default function Header() {
           <Link href="#contact" className="text-sm font-medium text-white/90 hover:text-green-400 transition-colors">
             Contact
           </Link>
-        </nav> */}
+        </nav>
 
         <div className="flex items-center gap-4">
           {/* Mobile Menu */}
