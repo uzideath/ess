@@ -38,8 +38,8 @@ export default function Header() {
     >
       <div className="container flex h-20 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Image src="/logo2.png" alt="EES Logo" width={32} height={32} className="h-8 w-8" />
-          <span className="text-xl font-bold text-white">EES</span>
+          <Image src="/logo2.png" alt="ESS Logo" width={32} height={32} className="h-8 w-8" />
+          <span className="text-xl font-bold text-white">ESS</span>
         </div>
 
         {/* Desktop Navigation */}
@@ -75,8 +75,8 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="bg-black/95 border-r border-white/10">
               <div className="flex items-center gap-2 mt-4 mb-8">
-                <Image src="/logo2.png" alt="EES Logo" width={32} height={32} className="h-8 w-8" />
-                <span className="text-xl font-bold text-white">EES</span>
+                <Image src="/logo2.png" alt="ESS Logo" width={32} height={32} className="h-8 w-8" />
+                <span className="text-xl font-bold text-white">ESS</span>
               </div>
               <nav className="flex flex-col gap-6">
                 <Link
