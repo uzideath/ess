@@ -10,9 +10,8 @@ import {
 import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle2, ExternalLink } from "lucide-react"
 import { FeatureBadge } from "./badge"
-import { ServiceType } from "./grid"
+import type { ServiceType } from "./grid"
 import { AnimatedStatsBar } from "./stats"
-
 
 interface HighlightedServiceProps {
     service: ServiceType
@@ -30,10 +29,10 @@ export function HighlightedService({ service }: HighlightedServiceProps) {
     ]
 
     return (
-        <div className="mb-20">
+        <div className="mb-10 md:mb-20">
             <div className="relative overflow-hidden rounded-2xl border border-emerald-200 bg-gradient-to-br from-emerald-50/80 to-white shadow-xl">
-                {/* Decorative background pattern */}
-                <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+                {/* Decorative background pattern - hidden on smallest screens */}
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none hidden sm:block">
                     <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -44,38 +43,45 @@ export function HighlightedService({ service }: HighlightedServiceProps) {
                     </svg>
                 </div>
 
-                {/* Featured badge */}
-                <div className="absolute top-0 right-0 bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-5 py-1.5 text-sm font-medium rounded-bl-xl z-10 shadow-md">
+                {/* Featured badge - adjusted for mobile */}
+                <div className="absolute top-0 right-0 bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 sm:px-5 py-1 sm:py-1.5 text-xs sm:text-sm font-medium rounded-bl-xl z-10 shadow-md">
                     Featured Service
                 </div>
 
-                <div className="grid md:grid-cols-5 gap-8 p-8 md:p-10 relative">
+                <div className="grid md:grid-cols-5 gap-6 md:gap-8 p-5 sm:p-8 md:p-10 relative">
+                    {/* Content section - full width on all screens, 2/5 on desktop */}
                     <div className="md:col-span-2 flex flex-col justify-center">
-                        <div className="mb-6 p-4 rounded-2xl bg-gradient-to-br from-emerald-100 to-emerald-50 w-20 h-20 flex items-center justify-center shadow-md">
-                            <Icon className="w-10 h-10 text-emerald-600" />
+                        <div className="mb-4 md:mb-6 p-3 md:p-4 rounded-2xl bg-gradient-to-br from-emerald-100 to-emerald-50 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center shadow-md">
+                            <Icon className="w-8 h-8 md:w-10 md:h-10 text-emerald-600" />
                         </div>
-                        <h3 className="text-2xl md:text-3xl font-bold mb-4 text-slate-900 leading-tight">{service.title}</h3>
-                        <p className="text-slate-700 mb-8 text-lg leading-relaxed">{service.description}</p>
 
-                        {/* Benefits list */}
-                        <div className="mb-8 bg-white/80 rounded-xl p-5 border border-emerald-100 shadow-sm">
-                            <h4 className="text-sm font-semibold text-emerald-800 uppercase tracking-wider mb-4">Key Benefits</h4>
-                            <ul className="space-y-3">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-slate-900 leading-tight">
+                            {service.title}
+                        </h3>
+                        <p className="text-slate-700 mb-5 md:mb-8 text-base md:text-lg leading-relaxed">{service.description}</p>
+
+                        {/* Benefits list - more compact on mobile */}
+                        <div className="mb-6 md:mb-8 bg-white/80 rounded-xl p-4 md:p-5 border border-emerald-100 shadow-sm">
+                            <h4 className="text-xs md:text-sm font-semibold text-emerald-800 uppercase tracking-wider mb-3 md:mb-4">
+                                Key Benefits
+                            </h4>
+                            <ul className="space-y-2 md:space-y-3">
                                 {benefits.map((benefit, index) => (
-                                    <li key={index} className="flex items-start gap-2.5">
-                                        <CheckCircle2 className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
-                                        <span className="text-slate-700">{benefit}</span>
+                                    <li key={index} className="flex items-start gap-2">
+                                        <CheckCircle2 className="h-4 w-4 md:h-5 md:w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                                        <span className="text-sm md:text-base text-slate-700">{benefit}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
 
-                        <div className="flex flex-wrap gap-3">
+                        {/* Buttons - stack on small mobile, side by side on larger screens */}
+                        <div className="flex flex-col sm:flex-row gap-3">
                             <Dialog>
                                 <DialogTrigger asChild>
                                     <Button
-                                        size="lg"
-                                        className="rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 shadow-md hover:shadow-lg transition-all duration-300"
+                                        size="default"
+                                        className="rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 shadow-md hover:shadow-lg transition-all duration-300 w-full sm:w-auto"
                                     >
                                         Learn More <ArrowRight className="ml-2 h-4 w-4" />
                                     </Button>
@@ -89,23 +95,24 @@ export function HighlightedService({ service }: HighlightedServiceProps) {
                                             <DialogTitle className="text-xl">{service.title}</DialogTitle>
                                         </div>
                                         <DialogDescription className="pt-4 text-base text-slate-700">
-                                            {service.longDescription}
+                                            {service.longDescription || service.description}
                                         </DialogDescription>
                                     </DialogHeader>
                                 </DialogContent>
                             </Dialog>
 
                             <Button
-                                size="lg"
+                                size="default"
                                 variant="outline"
-                                className="rounded-full border-emerald-200 hover:bg-emerald-50 transition-all duration-300"
+                                className="rounded-full border-emerald-200 hover:bg-emerald-50 transition-all duration-300 w-full sm:w-auto"
                             >
                                 Request Demo <ExternalLink className="ml-2 h-4 w-4" />
                             </Button>
                         </div>
                     </div>
 
-                    <div className="md:col-span-3 flex items-center justify-center">
+                    {/* Image section - HIDDEN on mobile, visible on md screens and up */}
+                    <div className="hidden md:flex md:col-span-3 items-center justify-center">
                         <div className="relative w-full rounded-xl overflow-hidden bg-white shadow-lg border border-slate-200/80">
                             {/* Animated Stats Bar */}
                             <AnimatedStatsBar />
@@ -145,24 +152,24 @@ export function HighlightedService({ service }: HighlightedServiceProps) {
                     </div>
                 </div>
 
-                {/* Feature badges */}
-                <div className="bg-gradient-to-r from-emerald-50 to-slate-50 p-6 border-t border-emerald-100">
-                    <div className="flex flex-wrap gap-3 justify-center">
+                {/* Feature badges - scrollable container on mobile */}
+                <div className="bg-gradient-to-r from-emerald-50 to-slate-50 p-4 md:p-6 border-t border-emerald-100 overflow-x-auto">
+                    <div className="flex gap-2 md:gap-3 md:flex-wrap md:justify-center min-w-max md:min-w-0 px-1">
                         <FeatureBadge
                             text="Real-time Monitoring"
-                            icon={<div className="w-3 h-3 rounded-full bg-emerald-500 mr-1 animate-pulse"></div>}
+                            icon={<div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-emerald-500 mr-1 animate-pulse"></div>}
                         />
                         <FeatureBadge
                             text="Predictive Maintenance"
-                            icon={<div className="w-3 h-3 rounded-full bg-blue-500 mr-1"></div>}
+                            icon={<div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-blue-500 mr-1"></div>}
                         />
                         <FeatureBadge
                             text="Performance Optimization"
-                            icon={<div className="w-3 h-3 rounded-full bg-amber-500 mr-1"></div>}
+                            icon={<div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-amber-500 mr-1"></div>}
                         />
                         <FeatureBadge
                             text="Custom Dashboards"
-                            icon={<div className="w-3 h-3 rounded-full bg-purple-500 mr-1"></div>}
+                            icon={<div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-purple-500 mr-1"></div>}
                         />
                     </div>
                 </div>
