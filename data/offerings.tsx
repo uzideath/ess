@@ -52,7 +52,7 @@ export const offerings = [
         title: "Control & Monitoring",
         icon: <BarChart3 className="h-5 w-5" />,
         description: "Comprehensive monitoring and control systems for maximum operational efficiency",
-        image: "/modern-control-center.png",
+        image: "/monitoring.jpg",
         items: [
             {
                 title: "Integrated SCADA Development",
@@ -80,7 +80,7 @@ export const offerings = [
         title: "Energy Technologies",
         icon: <Sun className="h-5 w-5" />,
         description: "Cutting-edge renewable energy solutions for sustainable power generation",
-        image: "/sustainable-home-energy.png",
+        image: "/tech.jpg",
         items: [
             {
                 title: "Solar Photovoltaics",
@@ -108,7 +108,7 @@ export const offerings = [
         title: "Professional Services",
         icon: <Users className="h-5 w-5" />,
         description: "Expert consulting and project management for renewable energy initiatives",
-        image: "/collaborative-energy-solutions.png",
+        image: "/prof.webp",
         items: [
             {
                 title: "EPC Contracting",

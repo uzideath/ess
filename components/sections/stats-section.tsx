@@ -11,7 +11,7 @@ export default function StatsSection() {
             <StatCard icon={BarChart3} value="$250M+" label="Assets Under Management" />
           </AnimatedSection>
           <AnimatedSection animation="fade-up" delay={200}>
-            <StatCard icon={Wind} value="45+" label="Green Energy Projects" />
+            <StatCard icon={Wind} value="52+" label="Green Energy Projects" />
           </AnimatedSection>
           <AnimatedSection animation="fade-up" delay={300}>
             <StatCard icon={Users} value="12,000+" label="Investors Worldwide" />

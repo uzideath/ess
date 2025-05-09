@@ -144,7 +144,7 @@ export function HighlightedService({ service }: HighlightedServiceProps) {
                                             "The SCADA system has transformed how we monitor and control our solar farm. We've seen a 30%
                                             reduction in operational costs and significantly improved efficiency."
                                         </p>
-                                        <p className="text-emerald-200 text-xs font-medium">— Sarah Johnson, CTO at GreenPower Solutions</p>
+                                        <p className="text-emerald-200 text-xs font-medium">— Sarah Cheng, CTO at GreenPower Solutions</p>
                                     </div>
                                 </div>
                             </div>

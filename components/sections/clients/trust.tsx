@@ -61,7 +61,7 @@ export default function TrustIndicators() {
             color: "from-teal-500 to-cyan-400",
         },
         {
-            value: 100,
+            value: 52,
             label: "Projects Delivered",
             icon: <CheckCircle className="h-6 w-6" />,
             description: "With exceptional results",

@@ -108,7 +108,7 @@ export default function CallToAction() {
                             <div className="flex items-center gap-3 mb-2">
                                 <div className="relative w-10 h-10 rounded-full overflow-hidden">
                                     <Image
-                                        src="/ceo-headshot.png"
+                                        src="/sarah.jpg"
                                         alt="Client testimonial"
                                         width={40}
                                         height={40}
@@ -116,7 +116,7 @@ export default function CallToAction() {
                                     />
                                 </div>
                                 <div>
-                                    <p className="font-medium text-emerald-800">Sarah Johnson</p>
+                                    <p className="font-medium text-emerald-800">Sarah Cheng</p>
                                     <p className="text-xs text-gray-500">CEO, GreenTech Solutions</p>
                                 </div>
                             </div>

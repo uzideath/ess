@@ -7,7 +7,7 @@ export default function TeamSection() {
     {
       name: "Sarah Johnson",
       position: "Chief Investment Officer",
-      bio: "15+ years of experience in renewable energy finance and investment management.",
+      bio: "10+ years of experience in renewable energy finance and investment management.",
       imageSrc: "/placeholder.svg?height=200&width=200&text=Team Member 1",
     },
     {
