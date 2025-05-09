@@ -66,7 +66,7 @@ export default function ClientsCarousel({ visibleClients }: ClientsCarouselProps
                 <ChevronRight className="h-5 w-5 text-emerald-700" />
             </button>
 
-            {/* Clients carousel */}
+       
             <div ref={carouselRef} className="flex overflow-x-auto pb-8 pt-4 px-4 -mx-4 scrollbar-hide snap-x">
                 {visibleClients.map((client, index) => (
                     <ClientCard key={client.name} client={client} index={index} />

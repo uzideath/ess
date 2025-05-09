@@ -32,13 +32,13 @@ export default function ClientsSection() {
             <div className="absolute -right-64 bottom-1/3 w-96 h-96 rounded-full bg-teal-100/20 blur-3xl -z-10"></div>
 
             <div className="container relative">
-                <SectionHeader />
+                {/* <SectionHeader /> */}
 
-                <CategoryFilter categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+                {/* <CategoryFilter categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 
                 <ClientsCarousel visibleClients={visibleClients} />
 
-                <TrustIndicators />
+                <TrustIndicators /> */}
 
                 <CallToAction />
             </div>

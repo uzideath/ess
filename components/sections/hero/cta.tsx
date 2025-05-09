@@ -1,28 +1,29 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, ChevronRight } from "lucide-react"
+import { ArrowRight, ChevronRight } from 'lucide-react'
 import Link from "next/link"
 import { JSX } from "react"
 
 export default function CTAButtons(): JSX.Element {
-    return (
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-4 md:pt-4 justify-center">
-            {/* Primary Button */}
-            <Link href={"#investments"}>
-                <Button className="bg-green-700 hover:bg-green-600 text-white h-10 md:h-12 px-6 md:px-8 rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-green-500/30 hover:shadow-green-600/40 hover:scale-[1.03] group text-sm md:text-base">
-                    Our Services
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </Button>
-            </Link>
+  return (
+    <div className="flex flex-col sm:flex-row gap-4 pt-4 md:pt-6 justify-center w-full max-w-md mx-auto">
+      {/* Primary Button */}
+      <Link href="#investments" className="w-full sm:w-1/2">
+        <Button className="w-full h-12 px-6 rounded-xl font-medium text-white bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 shadow-lg shadow-green-700/20 transition-all duration-300 hover:translate-y-[-2px] group">
+          <span>Our Services</span>
+          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+        </Button>
+      </Link>
 
-
-            {/* Secondary Button */}
-            <Button
-                variant="ghost"
-                className="h-10 md:h-12 px-6 md:px-8 rounded-xl font-semibold border border-green-500 text-green-300 hover:bg-green-600/10 hover:border-green-400 hover:text-green-200 transition-all duration-300 backdrop-blur-sm group text-sm md:text-base"
-            >
-                Learn More
-                <ChevronRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Button>
-        </div>
-    )
+      {/* Secondary Button */}
+      <Link href="#about" className="w-full sm:w-1/2">
+        <Button 
+          variant="outline"
+          className="w-full h-12 px-6 rounded-xl font-medium border-2 border-green-500/30 text-green-400 bg-green-500/5 hover:bg-green-500/10 hover:border-green-400/50 hover:text-green-300 transition-all duration-300 backdrop-blur-sm hover:translate-y-[-2px] group"
+        >
+          <span>Learn More</span>
+          <ChevronRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+        </Button>
+      </Link>
+    </div>
+  )
 }
