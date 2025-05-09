@@ -11,7 +11,7 @@ import TeamSection from "@/components/sections/team-section"
 import ContactSection from "@/components/sections/contact-section"
 import NewsletterSection from "@/components/sections/newsletter-section"
 import ClientsSection from "@/components/sections/client-sections"
-import ServicesSection from "@/components/organisms/services-setion"
+import ServicesSection from "@/components/organisms/services-section"
 import OfferingsSection from "@/components/sections/offerings-section"
 
 export default function LandingPage() {
@@ -27,7 +27,6 @@ export default function LandingPage() {
         <AboutSection />
         <InvestmentsSection />
         <ImpactSection />
-        <TeamSection />
         <ContactSection />
         <NewsletterSection />
       </main>
