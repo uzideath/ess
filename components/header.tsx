@@ -38,8 +38,9 @@ export default function Header() {
     >
       <div className="container flex h-20 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Image src="/logo2.png" alt="ESS Logo" width={32} height={32} className="h-8 w-8" />
-          <span className="text-xl font-bold text-white">ESS</span>
+          <Image src="/logo2.png" alt="ESS Logo" width={100} height={100} className="h-auto w-auto max-h-16" />
+
+
         </div>
 
         {/* Desktop Navigation */}
@@ -55,9 +56,6 @@ export default function Header() {
           </Link>
           <Link href="#impact" className="text-sm font-medium text-white/90 hover:text-green-400 transition-colors">
             Impact
-          </Link>
-          <Link href="#team" className="text-sm font-medium text-white/90 hover:text-green-400 transition-colors">
-            Team
           </Link>
           <Link href="#contact" className="text-sm font-medium text-white/90 hover:text-green-400 transition-colors">
             Contact
