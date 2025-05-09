@@ -13,6 +13,7 @@ import NewsletterSection from "@/components/sections/newsletter-section"
 import ClientsSection from "@/components/sections/client-sections"
 import ServicesSection from "@/components/organisms/services-section"
 import OfferingsSection from "@/components/sections/offerings-section"
+import { ComprehensiveApproach } from "@/components/sections/approach"
 
 export default function LandingPage() {
   return (
@@ -22,6 +23,7 @@ export default function LandingPage() {
         <HeroSection />
         <ServicesSection />
         <OfferingsSection />
+        <ComprehensiveApproach />
         <ClientsSection />
         <StatsSection />
         <AboutSection />
