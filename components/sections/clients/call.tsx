@@ -97,35 +97,6 @@ export default function CallToAction() {
                             ))}
                         </motion.div>
 
-                        {/* Testimonial */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                            viewport={{ once: true }}
-                            className="bg-white p-4 rounded-xl border border-emerald-100 shadow-sm mb-8"
-                        >
-                            <div className="flex items-center gap-3 mb-2">
-                                <div className="relative w-10 h-10 rounded-full overflow-hidden">
-                                    <Image
-                                        src="/sarah.jpg"
-                                        alt="Client testimonial"
-                                        width={40}
-                                        height={40}
-                                        className="object-cover"
-                                    />
-                                </div>
-                                <div>
-                                    <p className="font-medium text-emerald-800">Sarah Cheng</p>
-                                    <p className="text-xs text-gray-500">CEO, GreenTech Solutions</p>
-                                </div>
-                            </div>
-                            <p className="text-gray-600 text-sm italic">
-                                "Partnering with this team transformed our energy infrastructure, reducing costs by 40% while helping us
-                                meet our sustainability goals. Truly exceptional service!"
-                            </p>
-                        </motion.div>
-
                         {/* CTAs */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}

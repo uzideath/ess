@@ -132,7 +132,7 @@ export function HighlightedService({ service }: HighlightedServiceProps) {
                             </div>
 
                             {/* Testimonial overlay */}
-                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/90 to-transparent p-6">
+                            {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/90 to-transparent p-6">
                                 <div className="flex items-start gap-3">
                                     <div className="flex-shrink-0">
                                         <div className="relative w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md overflow-hidden">
@@ -147,7 +147,7 @@ export function HighlightedService({ service }: HighlightedServiceProps) {
                                         <p className="text-emerald-200 text-xs font-medium">— Sarah Cheng, CTO at GreenPower Solutions</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
