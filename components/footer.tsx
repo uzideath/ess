@@ -235,7 +235,7 @@ export default function Footer() {
               aria-label="Call us"
             >
               <Phone className="h-3.5 w-3.5" />
-              <span>+1 (234) 567-890</span>
+              <span>+61 430 516 683</span>
             </a>
             <a
               href="mailto:contact@energysystemsservices.com"
